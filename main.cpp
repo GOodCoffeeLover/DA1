@@ -62,8 +62,6 @@ void bucket_sort(vector& arr, int size){
 int main(){
 	vector arr(20);
 	int n=0;
-	double tmp1;
-	char tmp2[64];
 	while(std::cin){
 		std::cin>>arr[n].key>>arr[n].str; n++;
 	}
