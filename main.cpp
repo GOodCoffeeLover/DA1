@@ -56,6 +56,7 @@ void bucket_sort(vector& arr, int size){
 			arr[k++]=buckets[i][j];
 		} 
 	}
+	delete [] buckets;
 	return;
 }
 
