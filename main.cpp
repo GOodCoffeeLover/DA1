@@ -33,13 +33,13 @@ class vector{
 };
 
 void bucket_sort(vector& arr, int size){
-	vector* buckets=new vector[20];
-	for(int i=0; i<20; ++i) buckets[i].assing(size);
+	vector* buckets=new vector[21];
+	for(int i=0; i<21; ++i) buckets[i].assing(size);
 	for(int i=0; i<size; ++i){
-		buckets[(int)(arr[i].key)/10+10][buckets[(int)(arr[i].key)/10+10].size++]=arr[i];
+		buckets[(int)(arr[i].key+100.0)/10][buckets[(int)(arr[i].key+100.0)/10].size++]=arr[i];
 	}	
 	int k;
-	for(int i=0; i<20; ++i){
+	for(int i=0; i<21; ++i){
 		if(buckets[i].size==0) continue;
 		for(int j=0; j<buckets[i].size; ++j){
 			data q=buckets[i][j];	
@@ -51,7 +51,7 @@ void bucket_sort(vector& arr, int size){
 		}
 	}
 	k=0;
-	for(int i=0; i<20; ++i){
+	for(int i=0; i<21; ++i){
 		for(int j=0; j<buckets[i].size; ++j){ 
 			arr[k++]=buckets[i][j];
 		} 
